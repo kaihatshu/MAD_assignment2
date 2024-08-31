@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">RoomDatabase</string>
+    <string name="app_name">SchoolConnect</string>
     <string name="txt_logout">Logout</string>
     <string name="txt_login">Login</string>
     <string name="txt_home">Home</string>
-    <string name="txt_addNote">Add Note</string>
 
-    <string name="txt_password">Password</string>
+
+    <string name="txt_email">admin@gmail.com</string>
+    <string name="txt_password">Admin@1</string>
     <string name="txt_username">Username</string>
     <string name="txt_title">Title</string>
     <string name="txt_description">Description</string>

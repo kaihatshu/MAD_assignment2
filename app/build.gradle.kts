@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.chronelab.roomdatabase"
+    namespace = "com.chronelab.madas2schoolconnectapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.chronelab.roomdatabase"
+        applicationId; "com.chronelab.madas2schoolconnectapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -53,48 +53,49 @@ android {
 dependencies {
 
     // Import the Compose BOM
-    implementation(platform("androidx.compose:compose-bom:2023.10.01"))
-    implementation("androidx.activity:activity-compose:1.8.1")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-tooling")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation("androidx.navigation:navigation-compose:2.7.5")
+    implementation(platform(libs.androidx.compose.bom.v20240600))
+    implementation(libs.androidx.activity.compose.v191)
+    implementation(libs.material3)
+    implementation(libs.ui)
+    implementation(libs.ui.tooling)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v284)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation ("androidx.compose.ui:ui:1.1.0")
-    implementation ("androidx.compose.material3:material3:1.0.0-alpha12")
-    implementation ("androidx.compose.material:material-icons-extended:1.1.0")
+    implementation (libs.androidx.compose.ui.ui)
+    implementation (libs.androidx.compose.material3.material3)
+    implementation (libs.androidx.material.icons.extended)
+    implementation(libs.androidx.media3.common)
     testImplementation(libs.junit.junit)
     dependencies {
-        implementation ("androidx.core:core-ktx:1.9.0")
-        implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
-        implementation ("androidx.activity:activity-compose:1.6.1")
-        implementation ("androidx.compose.ui:ui:1.3.2")
-        implementation ("androidx.compose.material3:material3:1.0.0-alpha12")
-        implementation ("androidx.compose.material:material-icons-extended:1.3.2")
-        implementation ("androidx.compose.ui:ui-tooling-preview:1.3.2")
-        implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
-        implementation ("androidx.lifecycle:lifecycle-runtime-compose:2.5.1")
-        implementation ("androidx.navigation:navigation-compose:2.5.2")
-        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-        implementation ("androidx.compose.material:material-icons-extended:1.4.3")
-        implementation ("androidx.compose.runtime:runtime-livedata:1.4.3")
-        implementation ("com.google.code.gson:gson:2.8.9")
+        implementation (libs.androidx.core.ktx)
+        implementation (libs.androidx.lifecycle.runtime.ktx.v284)
+        implementation (libs.androidx.activity.compose.v191)
+        implementation (libs.androidx.compose.ui.ui)
+        implementation (libs.androidx.compose.material3.material3)
+        implementation (libs.androidx.material.icons.extended)
+        implementation (libs.androidx.compose.ui.ui.tooling.preview)
+        implementation (libs.androidx.lifecycle.viewmodel.compose.v284)
+        implementation (libs.androidx.lifecycle.runtime.compose)
+        implementation (libs.androidx.navigation.compose)
+        implementation (libs.kotlinx.coroutines.android)
+        implementation (libs.androidx.material.icons.extended)
+        implementation (libs.androidx.runtime.livedata)
+        implementation (libs.gson)
 
     }
 
     // Testing
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.junit)
 
     //Room
-    implementation("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
+    implementation(libs.androidx.room.runtime)
     ksp("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
-    implementation("androidx.room:room-ktx:${rootProject.extra["room_version"]}")
+    implementation(libs.androidx.room.ktx)
 }
 

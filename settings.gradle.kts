@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RoomDatabase"
+rootProject.name = "MAD AS2 SchoolConnectApp"
 include(":app")
  
